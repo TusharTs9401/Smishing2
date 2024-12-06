@@ -38,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
             showNotificationPermissionDialog();
         }
 
+
+        Button feedbackBtn = findViewById(R.id.feedback_btn);
+        feedbackBtn.setOnClickListener(v -> {
+            // Launch the Feedback Activity when the button is clicked
+            startActivity(new Intent(MainActivity.this, ActivityFeedback.class));
+        });
         BottomNavigationView nav = findViewById(R.id.bottom_navigation);
         nav.setSelectedItemId(R.id.nav_home);
         nav.setOnItemSelectedListener(menuItem -> {
